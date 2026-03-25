@@ -7,6 +7,10 @@ class Restriccion (str, Enum):
     INFLAMABLE = "Inflamble"
     PERECEDERO = "Perecedero"
     NINGUNO = "Ninguno"
+    
+class TipoEnvio (str, Enum):
+    NORMAL = "Normal"
+    EXPRESS = "Express"
 
 class EstadoEnvio(str, Enum):
     PENDIENTE = "Pendiente"
@@ -18,4 +22,10 @@ class Prioridad(str, Enum):
     BAJA = "Baja"
     MEDIA = "Media"
     ALTA = "Alta"
+    
+class VentanaHorario(str, Enum):
+    MAÑANA = "Mañana"
+    TARDE = "Tarde"
+    NOCHE = "Noche"
+
 

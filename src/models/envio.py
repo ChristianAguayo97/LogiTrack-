@@ -1,7 +1,8 @@
 from typing import Optional
 from datetime import datetime
 from sqlmodel import Field, SQLModel
-from src.models.enums import Restriccion, EstadoEnvio, Prioridad
+from src.models.enums import Restriccion, EstadoEnvio, Prioridad, TipoEnvio, VentanaHorario
+
 
 class EnvioBase(SQLModel):
     remitente_id: int
@@ -10,6 +11,8 @@ class EnvioBase(SQLModel):
     distancia_estimada: float = Field(ge=0)
     restricciones: Restriccion = Restriccion.NINGUNO
     tiene_caducidad: bool = False
+    tipo_envio: TipoEnvio = TipoEnvio.NORMAL
+    ventana_horario: VentanaHorario = VentanaHorario.MAÑANA
     creado_por_usuario_id: int
     
 class CrearEnvio(EnvioBase):
@@ -22,6 +25,8 @@ class ActualizarEnvio(SQLModel):
     distancia_estimada: Optional[float] = Field(default=None, ge=0)
     restricciones: Optional[Restriccion] = None
     tiene_caducidad: Optional[bool] = None
+    tipo_envio: Optional[TipoEnvio] = None
+    ventana_horario: Optional[VentanaHorario] = None
 
 class MostrarEnvio(EnvioBase):
     tracking_id: int
