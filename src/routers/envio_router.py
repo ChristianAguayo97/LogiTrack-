@@ -46,7 +46,8 @@ def actualizar_envio(tracking_id: int, datos: ActualizarEnvio, session: SessionD
         raise HTTPException(status_code=404, detail="Envío no encontrado")
     datos_dict = datos.model_dump(exclude_unset=True)
     for key, value in datos_dict.items():
-        setattr(envio, key, value)
+        if value is not None and value != "":
+            setattr(envio, key, value)
     session.add(envio)
     session.commit()
     session.refresh(envio)
