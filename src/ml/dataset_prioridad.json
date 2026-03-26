@@ -1,0 +1,1622 @@
+[
+  {
+    "distancia_estimada": 962.7,
+    "volumen_kg": 2.5,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.24,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 162.7,
+    "volumen_kg": 59.4,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 54.4,
+    "volumen_kg": 17.9,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.6,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 978.3,
+    "volumen_kg": 43.8,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.45,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1140.6,
+    "volumen_kg": 13.2,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.34,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1436.2,
+    "volumen_kg": 27.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.38,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 909.6,
+    "volumen_kg": 64.7,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.46,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 127.4,
+    "volumen_kg": 23.8,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.62,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 296.5,
+    "volumen_kg": 6.0,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.23,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1284.4,
+    "volumen_kg": 69.4,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.28,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 561.6,
+    "volumen_kg": 17.2,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.7,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 956.1,
+    "volumen_kg": 43.0,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.16,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1484.4,
+    "volumen_kg": 51.4,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.22,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 351.3,
+    "volumen_kg": 3.1,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.4,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1370.6,
+    "volumen_kg": 45.6,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.31,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1328.2,
+    "volumen_kg": 51.6,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.26,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 846.4,
+    "volumen_kg": 21.4,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.43,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 336.8,
+    "volumen_kg": 79.8,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.49,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 237.7,
+    "volumen_kg": 13.2,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.42,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 578.6,
+    "volumen_kg": 79.7,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.25,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1083.9,
+    "volumen_kg": 54.7,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.75,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 447.3,
+    "volumen_kg": 13.1,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.95,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1145.3,
+    "volumen_kg": 40.9,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.87,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 766.4,
+    "volumen_kg": 16.3,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.76,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 493.0,
+    "volumen_kg": 2.0,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.88,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 96.3,
+    "volumen_kg": 70.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1467.2,
+    "volumen_kg": 42.9,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.13,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 256.0,
+    "volumen_kg": 42.5,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.42,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1135.3,
+    "volumen_kg": 55.3,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.31,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1350.4,
+    "volumen_kg": 36.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.22,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 886.6,
+    "volumen_kg": 18.8,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.01,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 110.4,
+    "volumen_kg": 3.0,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.07,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1006.8,
+    "volumen_kg": 17.5,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.72,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1179.1,
+    "volumen_kg": 64.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 641.1,
+    "volumen_kg": 37.6,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.05,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 609.9,
+    "volumen_kg": 27.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.25,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 678.4,
+    "volumen_kg": 34.0,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.46,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1214.0,
+    "volumen_kg": 68.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.05,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1390.3,
+    "volumen_kg": 68.0,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.41,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1298.3,
+    "volumen_kg": 72.2,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.38,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1390.5,
+    "volumen_kg": 62.9,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.42,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 292.9,
+    "volumen_kg": 17.8,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.58,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 477.3,
+    "volumen_kg": 4.5,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.5,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1441.6,
+    "volumen_kg": 6.9,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.07,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1294.1,
+    "volumen_kg": 32.6,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.25,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 132.2,
+    "volumen_kg": 52.8,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.52,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1007.9,
+    "volumen_kg": 25.5,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.4,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 481.1,
+    "volumen_kg": 60.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.01,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 811.1,
+    "volumen_kg": 40.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.93,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 560.6,
+    "volumen_kg": 13.0,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.7,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1227.5,
+    "volumen_kg": 24.3,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.1,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 182.0,
+    "volumen_kg": 9.0,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.16,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 323.8,
+    "volumen_kg": 27.8,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.63,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 737.9,
+    "volumen_kg": 72.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 75.7,
+    "volumen_kg": 27.0,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.64,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1114.4,
+    "volumen_kg": 44.4,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.56,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1418.1,
+    "volumen_kg": 55.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.55,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 833.3,
+    "volumen_kg": 34.7,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.31,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 323.0,
+    "volumen_kg": 20.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.35,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1126.7,
+    "volumen_kg": 74.1,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.86,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 46.9,
+    "volumen_kg": 59.1,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.78,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1297.5,
+    "volumen_kg": 65.0,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.16,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1309.5,
+    "volumen_kg": 68.8,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.2,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 464.7,
+    "volumen_kg": 63.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.22,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 499.1,
+    "volumen_kg": 69.2,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.35,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1471.9,
+    "volumen_kg": 43.1,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.12,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 875.1,
+    "volumen_kg": 78.7,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.11,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1095.5,
+    "volumen_kg": 25.4,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.98,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1350.3,
+    "volumen_kg": 15.6,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.71,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1389.1,
+    "volumen_kg": 43.3,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.94,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 652.6,
+    "volumen_kg": 75.9,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.62,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1351.1,
+    "volumen_kg": 40.8,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.41,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 450.5,
+    "volumen_kg": 10.6,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.66,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1124.7,
+    "volumen_kg": 14.3,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.3,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 437.5,
+    "volumen_kg": 34.7,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.61,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 668.3,
+    "volumen_kg": 54.2,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.47,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 136.3,
+    "volumen_kg": 41.5,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.62,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1012.5,
+    "volumen_kg": 18.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.15,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1476.1,
+    "volumen_kg": 49.1,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.46,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 1047.6,
+    "volumen_kg": 39.8,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.15,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1169.8,
+    "volumen_kg": 17.9,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.52,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 381.3,
+    "volumen_kg": 67.9,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.13,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 801.4,
+    "volumen_kg": 44.9,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.95,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1224.4,
+    "volumen_kg": 71.4,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.83,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1118.0,
+    "volumen_kg": 38.2,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.75,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 732.0,
+    "volumen_kg": 19.5,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.08,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 414.9,
+    "volumen_kg": 25.9,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.08,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 580.7,
+    "volumen_kg": 12.6,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.06,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 818.5,
+    "volumen_kg": 33.6,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.83,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1419.6,
+    "volumen_kg": 2.1,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.38,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 454.9,
+    "volumen_kg": 31.5,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.54,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 336.9,
+    "volumen_kg": 35.1,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.39,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 255.9,
+    "volumen_kg": 37.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.98,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Media"
+  },
+  {
+    "distancia_estimada": 70.0,
+    "volumen_kg": 3.0,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.2,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1048.8,
+    "volumen_kg": 24.5,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.6,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1441.6,
+    "volumen_kg": 51.0,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.71,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1103.4,
+    "volumen_kg": 77.3,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.62,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 517.1,
+    "volumen_kg": 70.5,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.88,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 834.7,
+    "volumen_kg": 27.8,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.55,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 686.1,
+    "volumen_kg": 24.9,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.12,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1235.0,
+    "volumen_kg": 32.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.58,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 232.3,
+    "volumen_kg": 45.2,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 841.5,
+    "volumen_kg": 33.6,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.79,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 576.8,
+    "volumen_kg": 72.7,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.86,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 324.4,
+    "volumen_kg": 53.0,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.24,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1183.9,
+    "volumen_kg": 50.2,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.8,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 98.9,
+    "volumen_kg": 63.5,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.75,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 195.3,
+    "volumen_kg": 55.2,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.4,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 814.6,
+    "volumen_kg": 35.3,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.04,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 490.3,
+    "volumen_kg": 20.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.23,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 280.4,
+    "volumen_kg": 47.0,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.81,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 623.4,
+    "volumen_kg": 39.9,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.95,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 53.0,
+    "volumen_kg": 50.6,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.71,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1421.1,
+    "volumen_kg": 52.0,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.5,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1399.9,
+    "volumen_kg": 69.6,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.24,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1285.5,
+    "volumen_kg": 33.2,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.74,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1482.7,
+    "volumen_kg": 63.5,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.98,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 709.5,
+    "volumen_kg": 77.6,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.62,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 129.7,
+    "volumen_kg": 26.6,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.86,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 943.9,
+    "volumen_kg": 71.1,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.87,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1467.7,
+    "volumen_kg": 60.9,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.87,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 544.1,
+    "volumen_kg": 34.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.53,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 668.2,
+    "volumen_kg": 28.0,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.3,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1120.3,
+    "volumen_kg": 66.7,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.78,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 873.6,
+    "volumen_kg": 58.7,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.91,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 629.1,
+    "volumen_kg": 16.5,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.88,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1122.4,
+    "volumen_kg": 27.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.47,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1133.7,
+    "volumen_kg": 18.4,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.72,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 555.0,
+    "volumen_kg": 63.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.26,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1015.5,
+    "volumen_kg": 38.0,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.88,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1424.6,
+    "volumen_kg": 55.9,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.42,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 985.8,
+    "volumen_kg": 66.8,
+    "restriccion": "Toxico",
+    "saturacion_ruta": 0.41,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1038.5,
+    "volumen_kg": 17.8,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.95,
+    "tipo_envio": "express",
+    "ventana_horaria": "manana",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1471.6,
+    "volumen_kg": 29.7,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.36,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 292.8,
+    "volumen_kg": 10.2,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 32.1,
+    "volumen_kg": 63.3,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.59,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 74.6,
+    "volumen_kg": 62.8,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.52,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1446.4,
+    "volumen_kg": 5.3,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.85,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 682.8,
+    "volumen_kg": 18.7,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.83,
+    "tipo_envio": "express",
+    "ventana_horaria": "tarde",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 192.1,
+    "volumen_kg": 28.6,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.94,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 86.7,
+    "volumen_kg": 23.4,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.35,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1146.3,
+    "volumen_kg": 46.1,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.85,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1394.3,
+    "volumen_kg": 66.4,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.03,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 244.5,
+    "volumen_kg": 49.6,
+    "restriccion": "Inflamble",
+    "saturacion_ruta": 0.08,
+    "tipo_envio": "express",
+    "ventana_horaria": "noche",
+    "prioridad": "Alta"
+  },
+  {
+    "distancia_estimada": 1009.0,
+    "volumen_kg": 40.9,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.36,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 519.2,
+    "volumen_kg": 61.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.23,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 89.4,
+    "volumen_kg": 40.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.39,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 709.0,
+    "volumen_kg": 49.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.02,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 478.4,
+    "volumen_kg": 22.7,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.03,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 555.0,
+    "volumen_kg": 32.6,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.4,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 848.8,
+    "volumen_kg": 38.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.37,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 38.2,
+    "volumen_kg": 25.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.41,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 85.6,
+    "volumen_kg": 72.5,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.64,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 625.8,
+    "volumen_kg": 57.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.68,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 389.1,
+    "volumen_kg": 0.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.58,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 634.7,
+    "volumen_kg": 61.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.24,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 911.4,
+    "volumen_kg": 3.6,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.19,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 833.5,
+    "volumen_kg": 5.0,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.7,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 167.9,
+    "volumen_kg": 8.3,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.51,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 89.9,
+    "volumen_kg": 29.0,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.48,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1068.1,
+    "volumen_kg": 35.8,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.08,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 145.9,
+    "volumen_kg": 8.1,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.48,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1445.2,
+    "volumen_kg": 25.5,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.25,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 182.8,
+    "volumen_kg": 49.2,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.31,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1212.6,
+    "volumen_kg": 22.1,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.26,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 565.5,
+    "volumen_kg": 40.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.18,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 208.9,
+    "volumen_kg": 65.7,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.59,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 679.9,
+    "volumen_kg": 25.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.54,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 600.4,
+    "volumen_kg": 4.4,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.26,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 698.4,
+    "volumen_kg": 64.4,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.12,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 883.3,
+    "volumen_kg": 73.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.02,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 817.8,
+    "volumen_kg": 14.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.09,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 336.0,
+    "volumen_kg": 42.4,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.33,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 39.9,
+    "volumen_kg": 21.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.07,
+    "tipo_envio": "normal",
+    "ventana_horaria": "tarde",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 736.5,
+    "volumen_kg": 50.7,
+    "restriccion": "Fragil",
+    "saturacion_ruta": 0.31,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 649.2,
+    "volumen_kg": 38.5,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.04,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1477.5,
+    "volumen_kg": 17.3,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.59,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 749.6,
+    "volumen_kg": 17.0,
+    "restriccion": "Perecedero",
+    "saturacion_ruta": 0.33,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 354.4,
+    "volumen_kg": 79.1,
+    "restriccion": "Frio",
+    "saturacion_ruta": 0.26,
+    "tipo_envio": "normal",
+    "ventana_horaria": "manana",
+    "prioridad": "Baja"
+  },
+  {
+    "distancia_estimada": 1110.4,
+    "volumen_kg": 8.1,
+    "restriccion": "Ninguno",
+    "saturacion_ruta": 0.01,
+    "tipo_envio": "normal",
+    "ventana_horaria": "noche",
+    "prioridad": "Baja"
+  }
+]

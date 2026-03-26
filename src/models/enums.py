@@ -4,7 +4,7 @@ class Restriccion (str, Enum):
     FRIO = "Frio"
     FRAGIL = "Fragil"
     TOXICO = "Toxico"
-    INFLAMABLE = "Inflamble"
+    INFLAMABLE = "Inflamable"
     PERECEDERO = "Perecedero"
     NINGUNO = "Ninguno"
     

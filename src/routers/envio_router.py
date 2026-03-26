@@ -3,6 +3,7 @@ from sqlmodel import select
 from src.models.envio import Envio, CrearEnvio, ActualizarEnvio, MostrarEnvio
 from src.models.enums import EstadoEnvio
 from src.routers.deps.db_sessions import SessionDep
+from src.services.prioridad_service import predecir_prioridad
 
 
 envio_router = APIRouter(prefix="/envios", tags=["Envíos"])
@@ -11,6 +12,8 @@ envio_router = APIRouter(prefix="/envios", tags=["Envíos"])
 @envio_router.post("/", response_model=MostrarEnvio, status_code=201)
 def crear_envio(datos: CrearEnvio, session: SessionDep):
     envio = Envio.model_validate(datos)
+    prioridad = predecir_prioridad(envio)
+    envio.prioridad = prioridad
     session.add(envio)
     session.commit()
     session.refresh(envio)
@@ -48,6 +51,8 @@ def actualizar_envio(tracking_id: int, datos: ActualizarEnvio, session: SessionD
     for key, value in datos_dict.items():
         if value is not None and value != "":
             setattr(envio, key, value)
+    prioridad = predecir_prioridad(envio)
+    envio.prioridad = prioridad
     session.add(envio)
     session.commit()
     session.refresh(envio)
