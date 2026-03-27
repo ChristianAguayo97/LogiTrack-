@@ -74,3 +74,8 @@ def entrenar_modelo():
     with open(modelo_path, "wb") as f:
         pickle.dump(modelo, f)
     return modelo
+
+if __name__ == "__main__":
+    print("Iniciando entrenamiento del modelo...")
+    entrenar_modelo()
+    print("Modelo guardado exitosamente en models_ml/modelo_prioridad.pkl")
