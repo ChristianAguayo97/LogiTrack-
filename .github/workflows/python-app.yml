@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 jobs:
-  test-api:
+  Test-API:
 
     runs-on: ubuntu-latest
 
