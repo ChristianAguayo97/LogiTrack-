@@ -76,3 +76,25 @@ def test_cambiar_estado(client: TestClient):
     response = client.patch(f"/envios/{tracking_id}/estado?estado=En%20transito")
     assert response.status_code == 200
     assert response.json()["estado"] == "En transito"
+
+def test_alta_envio_incompleto(client: TestClient):
+    datos_incompletos = {"remitente_id": 1}
+    response = client.post("/envios/", json=datos_incompletos)
+    assert response.status_code == 422
+
+def test_prioridad_alta_ml(client: TestClient):
+    datos = {
+        "remitente_id": 1,
+        "destinatario_id": 2,
+        "peso_paquete": 64.7,
+        "distancia_estimada": 909.6,
+        "restricciones": "Inflamable", 
+        "saturacion_ruta": 0.46,
+        "tipo_envio": "Express",        
+        "ventana_horario": "Tarde",     
+        "creado_por_usuario_id": 1
+    }
+    response = client.post("/envios/", json=datos)
+    assert response.status_code == 201 
+    data = response.json()
+    assert data["prioridad"] == "Alta"
