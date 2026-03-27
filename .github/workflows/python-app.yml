@@ -15,6 +15,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    # Variables .env falsas para que no arroje excepcion (porque al ejecutar main, siempre ejecuta el db.py)
+    env:
+      MYSQL_SERVER: localhost
+      MYSQL_PORT: 3306
+      MYSQL_USER: fake_user
+      MYSQL_PASSWORD: fake_password
+      MYSQL_DB: fake_db
+
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
