@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from sqlmodel import SQLModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -5,12 +7,17 @@ from src.config.db import engine
 from src.models import envio
 from src.routers.envio_router import envio_router
 
-SQLModel.metadata.create_all(engine)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    SQLModel.metadata.create_all(engine)
+    yield
 
 app = FastAPI(
         title="LogiTrack API",
         description= "API para gestion de envíos",
         version="0.0.1",
+        lifespan=lifespan
 )
 
 app.add_middleware(
