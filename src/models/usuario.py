@@ -6,6 +6,7 @@ from sqlmodel import SQLModel, Field
 class Rol(str, Enum):
     OPERADOR = "Operador"
     SUPERVISOR = "Supervisor"
+    CLIENTE = "Cliente"
 
 
 class Usuario(SQLModel, table=True):

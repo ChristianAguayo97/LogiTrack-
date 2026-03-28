@@ -34,3 +34,11 @@ def requiere_operador_o_supervisor(usuario: Usuario) -> None:
             status_code=403,
             detail=f"Acceso denegado. Se requiere rol Operador o Supervisor. Rol actual: {usuario.rol.value}",
         )
+
+
+def requiere_cliente(usuario: Usuario) -> None:
+    if usuario.rol != Rol.CLIENTE:
+        raise HTTPException(
+            status_code=403,
+            detail=f"Acceso denegado. Se requiere rol Cliente. Rol actual: {usuario.rol.value}",
+        )

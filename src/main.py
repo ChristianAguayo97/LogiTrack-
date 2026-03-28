@@ -7,6 +7,7 @@ from src.config.db import engine
 from src.models import envio, usuario
 from src.routers.envio_router import envio_router
 from src.routers.auditoria_router import auditoria_router
+from src.routers.cliente_router import envio_cliente_router
 
 
 @asynccontextmanager
@@ -31,6 +32,7 @@ app.add_middleware(
 
 app.include_router(envio_router)
 app.include_router(auditoria_router)
+app.include_router(envio_cliente_router)
 
 @app.get("/")
 def home():
