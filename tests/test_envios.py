@@ -6,6 +6,10 @@ from src.main import app
 from src.routers.deps.db_sessions import get_db
 
 
+HEADERS_OPERADOR = {"x-usuario-id": "1", "x-usuario-nombre": "Operador Test", "x-usuario-rol": "Operador"}
+HEADERS_SUPERVISOR = {"x-usuario-id": "2", "x-usuario-nombre": "Supervisor Test", "x-usuario-rol": "Supervisor"}
+
+
 @pytest.fixture(name="session")
 def session_fixture():
     engine = create_engine(
@@ -43,7 +47,7 @@ def test_crear_envio(client: TestClient):
         "distancia_estimada": 100.0,
         "creado_por_usuario_id": 1,
     }
-    response = client.post("/envios/", json=datos)
+    response = client.post("/envios/", json=datos, headers=HEADERS_OPERADOR)
     assert response.status_code == 201
     data = response.json()
     assert data["remitente_id"] == 1
@@ -52,17 +56,17 @@ def test_crear_envio(client: TestClient):
 
 
 def test_listar_envios(client: TestClient):
-    response = client.get("/envios/")
+    response = client.get("/envios/", headers=HEADERS_OPERADOR)
     assert response.status_code == 200
     assert isinstance(response.json(), list)
 
 
 def test_obtener_envio_inexistente(client: TestClient):
-    response = client.get("/envios/9999")
+    response = client.get("/envios/9999", headers=HEADERS_OPERADOR)
     assert response.status_code == 404
 
 
-def test_cambiar_estado(client: TestClient):
+def test_cambiar_estado_operador_exitoso(client: TestClient):
     datos = {
         "remitente_id": 1,
         "destinatario_id": 2,
@@ -70,17 +74,33 @@ def test_cambiar_estado(client: TestClient):
         "distancia_estimada": 50.0,
         "creado_por_usuario_id": 1,
     }
-    crear = client.post("/envios/", json=datos)
+    crear = client.post("/envios/", json=datos, headers=HEADERS_OPERADOR)
     tracking_id = crear.json()["tracking_id"]
-
-    response = client.patch(f"/envios/{tracking_id}/estado?estado=En%20transito")
+    response = client.patch(f"/envios/{tracking_id}/estado?estado=En%20transito", headers=HEADERS_OPERADOR)
     assert response.status_code == 200
     assert response.json()["estado"] == "En transito"
 
+
+def test_cambiar_estado_supervisor_exitoso(client: TestClient):
+    datos = {
+        "remitente_id": 1,
+        "destinatario_id": 2,
+        "peso_paquete": 3.0,
+        "distancia_estimada": 50.0,
+        "creado_por_usuario_id": 1,
+    }
+    crear = client.post("/envios/", json=datos, headers=HEADERS_SUPERVISOR)
+    tracking_id = crear.json()["tracking_id"]
+    response = client.patch(f"/envios/{tracking_id}/estado?estado=En%20transito", headers=HEADERS_SUPERVISOR)
+    assert response.status_code == 200
+    assert response.json()["estado"] == "En transito"
+
+
 def test_alta_envio_incompleto(client: TestClient):
     datos_incompletos = {"remitente_id": 1}
-    response = client.post("/envios/", json=datos_incompletos)
+    response = client.post("/envios/", json=datos_incompletos, headers=HEADERS_OPERADOR)
     assert response.status_code == 422
+
 
 def test_prioridad_alta_ml(client: TestClient):
     datos = {
@@ -88,13 +108,24 @@ def test_prioridad_alta_ml(client: TestClient):
         "destinatario_id": 2,
         "peso_paquete": 64.7,
         "distancia_estimada": 909.6,
-        "restricciones": "Inflamable", 
+        "restricciones": "Inflamable",
         "saturacion_ruta": 0.46,
-        "tipo_envio": "Express",        
-        "ventana_horario": "Tarde",     
+        "tipo_envio": "Express",
+        "ventana_horario": "Tarde",
         "creado_por_usuario_id": 1
     }
-    response = client.post("/envios/", json=datos)
-    assert response.status_code == 201 
+    response = client.post("/envios/", json=datos, headers=HEADERS_SUPERVISOR)
+    assert response.status_code == 201
     data = response.json()
     assert data["prioridad"] == "Alta"
+
+
+def test_auditoria_requiere_supervisor(client: TestClient):
+    response = client.get("/auditoria/", headers=HEADERS_OPERADOR)
+    assert response.status_code == 403
+
+
+def test_auditoria_listar_como_supervisor(client: TestClient):
+    response = client.get("/auditoria/", headers=HEADERS_SUPERVISOR)
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)

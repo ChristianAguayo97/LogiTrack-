@@ -1,22 +1,35 @@
-from fastapi import APIRouter, Query, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import select
 from src.models.envio import Envio, CrearEnvio, ActualizarEnvio, MostrarEnvio
 from src.models.enums import EstadoEnvio
+from src.models.usuario import Rol
 from src.routers.deps.db_sessions import SessionDep
+from src.routers.deps.auth import UsuarioDep, requiere_supervisor, requiere_operador_o_supervisor
 from src.services.prioridad_service import predecir_prioridad
+from src.services.auditoria_service import registrar_auditoria
 
 
 envio_router = APIRouter(prefix="/envios", tags=["Envíos"])
 
 
 @envio_router.post("/", response_model=MostrarEnvio, status_code=201)
-def crear_envio(datos: CrearEnvio, session: SessionDep):
+def crear_envio(datos: CrearEnvio, session: SessionDep, usuario: UsuarioDep):
+    requiere_operador_o_supervisor(usuario)
     envio = Envio.model_validate(datos)
     prioridad = predecir_prioridad(envio)
     envio.prioridad = prioridad
     session.add(envio)
     session.commit()
     session.refresh(envio)
+    registrar_auditoria(
+        session=session,
+        usuario_id=usuario.id,
+        usuario_nombre=usuario.nombre,
+        usuario_rol=usuario.rol,
+        envio_id=envio.tracking_id,
+        accion="CREAR",
+        detalle=f"Envío creado con prioridad {prioridad.value}",
+    )
     return envio
 
 
@@ -35,7 +48,7 @@ def listar_envios(
 
 
 @envio_router.get("/{tracking_id}", response_model=MostrarEnvio)
-def obtener_envio(tracking_id: int, session: SessionDep):
+def obtener_envio(tracking_id: int, session: SessionDep, usuario: UsuarioDep):
     envio = session.get(Envio, tracking_id)
     if not envio:
         raise HTTPException(status_code=404, detail="Envío no encontrado")
@@ -43,7 +56,8 @@ def obtener_envio(tracking_id: int, session: SessionDep):
 
 
 @envio_router.patch("/{tracking_id}", response_model=MostrarEnvio)
-def actualizar_envio(tracking_id: int, datos: ActualizarEnvio, session: SessionDep):
+def actualizar_envio(tracking_id: int, datos: ActualizarEnvio, session: SessionDep, usuario: UsuarioDep):
+    requiere_operador_o_supervisor(usuario)
     envio = session.get(Envio, tracking_id)
     if not envio:
         raise HTTPException(status_code=404, detail="Envío no encontrado")
@@ -56,16 +70,59 @@ def actualizar_envio(tracking_id: int, datos: ActualizarEnvio, session: SessionD
     session.add(envio)
     session.commit()
     session.refresh(envio)
+    registrar_auditoria(
+        session=session,
+        usuario_id=usuario.id,
+        usuario_nombre=usuario.nombre,
+        usuario_rol=usuario.rol,
+        envio_id=envio.tracking_id,
+        accion="ACTUALIZAR",
+        detalle=f"Campos actualizados: {list(datos_dict.keys())}",
+    )
     return envio
 
 
 @envio_router.patch("/{tracking_id}/estado", response_model=MostrarEnvio)
-def cambiar_estado(tracking_id: int, estado: EstadoEnvio, session: SessionDep):
+def cambiar_estado(tracking_id: int, estado: EstadoEnvio, session: SessionDep, usuario: UsuarioDep):
+    requiere_operador_o_supervisor(usuario)
     envio = session.get(Envio, tracking_id)
     if not envio:
         raise HTTPException(status_code=404, detail="Envío no encontrado")
+    estado_anterior = envio.estado
     envio.estado = estado
     session.add(envio)
     session.commit()
     session.refresh(envio)
+    registrar_auditoria(
+        session=session,
+        usuario_id=usuario.id,
+        usuario_nombre=usuario.nombre,
+        usuario_rol=usuario.rol,
+        envio_id=envio.tracking_id,
+        accion="CAMBIAR_ESTADO",
+        detalle=f"Estado cambiado de '{estado_anterior.value}' a '{estado.value}'",
+    )
+    return envio
+
+
+@envio_router.patch("/{tracking_id}/cancelar", response_model=MostrarEnvio)
+def cancelar_envio(tracking_id: int, session: SessionDep, usuario: UsuarioDep):
+    requiere_supervisor(usuario)
+    envio = session.get(Envio, tracking_id)
+    if not envio:
+        raise HTTPException(status_code=404, detail="Envío no encontrado")
+    estado_anterior = envio.estado
+    envio.estado = EstadoEnvio.CANCELADO
+    session.add(envio)
+    session.commit()
+    session.refresh(envio)
+    registrar_auditoria(
+        session=session,
+        usuario_id=usuario.id,
+        usuario_nombre=usuario.nombre,
+        usuario_rol=usuario.rol,
+        envio_id=envio.tracking_id,
+        accion="CANCELAR",
+        detalle=f"Envío cancelado. Estado anterior: '{estado_anterior.value}'",
+    )
     return envio

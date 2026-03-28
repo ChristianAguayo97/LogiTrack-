@@ -26,18 +26,18 @@ def _obtener_features(envio: Envio) -> list:
     es_noche = 1 if envio.ventana_horario == VentanaHorario.NOCHE else 0
     
     return [
-        envio.distancia_estimada,
-        envio.peso_paquete,
-        es_fragil,
-        es_frio,
-        es_toxico,
-        es_inflamble,
-        es_perecedero,
-        envio.saturacion_ruta,
-        tipo_express,
-        es_manana,
-        es_tarde,
-        es_noche,
+        float(envio.distancia_estimada),
+        float(envio.peso_paquete),
+        float(es_fragil),
+        float(es_frio),
+        float(es_toxico),
+        float(es_inflamble),
+        float(es_perecedero),
+        float(envio.saturacion_ruta),
+        float(tipo_express),
+        float(es_manana),
+        float(es_tarde),
+        float(es_noche),
     ]
 
 
@@ -51,7 +51,14 @@ def predecir_prioridad(envio: Envio) -> Prioridad:
         prediccion = modelo.predict([features])[0]
         return Prioridad(prediccion)
     
-    raise RuntimeError(
-        "Modelo de ML no encontrado. Ejecuta 'python -m src.ml.entrenar_modelo' "
-        "para entrenar el modelo."
-    )
+    return _prioridad_default(envio)
+
+
+def _prioridad_default(envio: Envio) -> Prioridad:
+    if envio.tipo_envio == TipoEnvio.EXPRESS and envio.saturacion_ruta > 0.5:
+        return Prioridad.ALTA
+    elif envio.restricciones in [Restriccion.INFLAMABLE, Restriccion.TOXICO]:
+        return Prioridad.ALTA
+    elif envio.restricciones == Restriccion.PERECEDERO:
+        return Prioridad.MEDIA
+    return Prioridad.BAJA
