@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import select
 from src.models.envio import Envio, CrearEnvio, ActualizarEnvio, MostrarEnvio
 from src.models.enums import EstadoEnvio
-from src.models.usuario import Rol
 from src.routers.deps.db_sessions import SessionDep
 from src.routers.deps.auth import UsuarioDep, requiere_supervisor, requiere_operador_o_supervisor
 from src.services.prioridad_service import predecir_prioridad
