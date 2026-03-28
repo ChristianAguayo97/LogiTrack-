@@ -14,6 +14,11 @@ envio_router = APIRouter(prefix="/envios", tags=["Envíos"])
 @envio_router.post("/", response_model=MostrarEnvio, status_code=201)
 def crear_envio(datos: CrearEnvio, session: SessionDep, usuario: UsuarioDep):
     requiere_operador_o_supervisor(usuario)
+    if not datos.consentimiento_datos:
+        raise HTTPException(
+            status_code=400,
+            detail="Se requiere consentimiento para el tratamiento de datos personales (Ley 25.326, Art. 5)",
+        )
     envio = Envio.model_validate(datos)
     prioridad = predecir_prioridad(envio)
     envio.prioridad = prioridad
@@ -38,10 +43,16 @@ def listar_envios(
     skip: int = Query(0, ge=0),
     limit: int = Query(100, ge=1, le=500),
     estado: EstadoEnvio | None = None,
+    destinatario_id: int | None = None,
+    remitente_id: int | None = None,
 ):
     query = select(Envio)
     if estado:
         query = query.where(Envio.estado == estado)
+    if destinatario_id is not None:
+        query = query.where(Envio.destinatario_id == destinatario_id)
+    if remitente_id is not None:
+        query = query.where(Envio.remitente_id == remitente_id)
     envios = session.exec(query.offset(skip).limit(limit)).all()
     return envios
 
@@ -83,7 +94,7 @@ def actualizar_envio(tracking_id: int, datos: ActualizarEnvio, session: SessionD
 
 @envio_router.patch("/{tracking_id}/estado", response_model=MostrarEnvio)
 def cambiar_estado(tracking_id: int, estado: EstadoEnvio, session: SessionDep, usuario: UsuarioDep):
-    requiere_operador_o_supervisor(usuario)
+    requiere_supervisor(usuario)
     envio = session.get(Envio, tracking_id)
     if not envio:
         raise HTTPException(status_code=404, detail="Envío no encontrado")

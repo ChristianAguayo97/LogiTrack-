@@ -20,6 +20,7 @@ class EnvioBase(SQLModel):
     ventana_horario: VentanaHorario = VentanaHorario.MAÑANA
     saturacion_ruta: float = Field(ge=0, le=1, default=0.0)
     creado_por_usuario_id: int
+    consentimiento_datos: bool = Field(default=False)
 
 
 class CrearEnvio(EnvioBase):
