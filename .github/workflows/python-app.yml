@@ -37,7 +37,10 @@ jobs:
         python-version: "3.10"
     - name: Instalar dependencias
       run: pip install -r requirements.txt
-    - name: Entrenar Modelo de IA
-      run: python -m src.ml.entrenar_modelo
+    #- name: Entrenar Modelo de IA
+    #  run: python -m src.ml.entrenar_modelo
     - name: Testing con pytest
       run: pytest -v
+    - name: Linting con ruff
+      run: ruff check . 
+      
