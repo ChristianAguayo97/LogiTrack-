@@ -1,9 +1,5 @@
-import json
 import pickle
 from pathlib import Path
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
 from src.models.envio import Envio
 from src.models.enums import Prioridad, TipoEnvio, Restriccion, VentanaHorario
 

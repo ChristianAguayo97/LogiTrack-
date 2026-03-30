@@ -1,6 +1,3 @@
-import re
-
-
 def enmascarar_dni(dni: str) -> str:
     if not dni or len(dni) < 4:
         return "****"

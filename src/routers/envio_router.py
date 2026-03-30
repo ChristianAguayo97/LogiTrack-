@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query
 from sqlmodel import select
 from src.models.envio import Envio, CrearEnvio, ActualizarEnvio, MostrarEnvio
 from src.models.enums import EstadoEnvio
