@@ -902,6 +902,12 @@ El resultado final es la mayoría de votos.
 ## Comandos Útiles
 
 ```bash
+# Activar entorno virtual (Windows)
+.venv\Scripts\activate
+
+# Activar entorno virtual (Linux)
+python -m venv . venv
+
 # Instalar dependencias
 pip install -r requirements.txt
 
@@ -913,6 +919,9 @@ fastapi dev src/main.py
 
 # Ejecutar tests
 pytest tests/ -v
+
+# Ejecutar linter
+ruff check .
 
 # Ver documentación Swagger
 # Abrir http://localhost:8000/docs
