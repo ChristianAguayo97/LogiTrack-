@@ -3,7 +3,6 @@ import pickle
 from pathlib import Path
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 import numpy as np
 
 
@@ -67,8 +66,6 @@ def entrenar_modelo():
         class_weight="balanced"
     )
     modelo.fit(X_train, y_train)
-    y_pred = modelo.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
     MODELOS_DIR.mkdir(exist_ok=True)
     modelo_path = MODELOS_DIR / "modelo_prioridad.pkl"
     with open(modelo_path, "wb") as f:

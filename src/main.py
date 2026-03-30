@@ -4,7 +4,6 @@ from sqlmodel import SQLModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.config.db import engine
-from src.models import envio, usuario
 from src.routers.envio_router import envio_router
 from src.routers.auditoria_router import auditoria_router
 from src.routers.cliente_router import envio_cliente_router

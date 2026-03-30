@@ -1,6 +1,6 @@
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Query
 from sqlmodel import select
-from src.models.usuario import Auditoria, Rol
+from src.models.usuario import Auditoria
 from src.routers.deps.db_sessions import SessionDep
 from src.routers.deps.auth import UsuarioDep, requiere_supervisor
 
