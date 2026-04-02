@@ -83,6 +83,18 @@ return (
         </div>
 
         <div className="campo">
+            <label>Restricciones</label>
+            <select name="restricciones" value={formData.restricciones} onChange={manejarCambio}>
+                <option value="Ninguno">Ninguno</option>
+                <option value="Frio">Frio</option>
+                <option value="Fragil">Fragil</option>
+                <option value="Toxico">Toxico</option>
+                <option value="Inflamable">Inflamable</option>
+                <option value="Perecedero">Perecedero</option>
+            </select>
+        </div>
+
+        <div className="campo">
             <label>Tipo de envio</label>
             <select name="tipo_envio" value={formData.tipo_envio} onChange={manejarCambio}>
                 <option value="Normal">Normal</option>

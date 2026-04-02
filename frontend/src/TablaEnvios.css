@@ -22,7 +22,6 @@
 /* Un pequeño toque extra: efecto "hover" para que la fila se ilumine al pasar el mouse */
 .fila-envio:hover {
   background-color: #c0dbf0;
-  cursor: pointer;
 }
 
 .mensaje-vacio {
