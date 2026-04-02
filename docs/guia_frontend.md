@@ -34,3 +34,53 @@ frontend/
 
 
 ---
+
+---
+
+## Comandos Útiles para BACKEND
+
+```bash
+# Activar entorno virtual (Windows)
+.venv\Scripts\activate
+
+# Activar entorno virtual (Linux)
+python -m venv . venv
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Entrenar modelo de ML
+python -m src.ml.entrenar_modelo
+
+# Ejecutar servidor
+fastapi dev src/main.py
+
+# Ejecutar tests
+pytest tests/ -v
+
+# Ejecutar linter
+ruff check .
+
+# Ver documentación Swagger
+# Abrir http://localhost:8000/docs
+```
+
+## Flujo Completo de la Aplicación
+
+```
+1. Usuario crea envío (POST /envios/)
+          ↓
+2. FastAPI valida los datos (CrearEnvio)
+          ↓
+3. Se crea objeto Envio en memoria
+          ↓
+4. Se llama a predecir_prioridad(envio)
+          ↓
+5. _obtener_features() convierte a números
+          ↓
+6. Random Forest predice: Alta/Media/Baja
+          ↓
+7. Se guarda en MySQL con prioridad asignada
+          ↓
+8. Se devuelve respuesta al usuario
+```
