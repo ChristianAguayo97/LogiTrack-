@@ -1,6 +1,7 @@
 /*
 * Componente encargado de mostrar la tabla de envíos. Recibe un array de envíos como prop y los muestra en una tabla HTML.
 */
+import './TablaEnvios.css';
 
 const TablaEnvios = ({ envios }) => {
   return (

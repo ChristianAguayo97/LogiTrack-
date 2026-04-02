@@ -1,7 +1,12 @@
 import { useState } from "react";  
+import { useNavigate } from "react-router-dom";
 import './FormularioEnvio.css';
 
-const FormularioEnvio = ({ alCompletar }) => {
+const FormularioEnvio = () => {
+
+    // Función que se llamará al completar el formulario para actualizar la lista de envíos
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({  
         remitente_id: '',  
         destinatario_id: '',
@@ -44,16 +49,20 @@ const enviarFormulario = (e) => {
     })
     .then(data => {
         alert(`Envío creado con éxito, Tracking ID: ${data.tracking_id}`);
-        alCompletar(); // Llamar a la función para actualizar la lista de envíos
+        navigate('/'); // Redirige a la página principal después de crear el envío
     })
     .catch(error => console.error('Error:', error));
 };
 
 return (
     <div className="formulario-tarjeta">
-        <h2>Crear Envío</h2>
+        <div className="botones-control">
+            <h2>Crear Envío</h2>
+            <button onClick={() => navigate('/')} className='btn-volver'>Volver atras</button>
+        </div>
+        
         <form onSubmit={enviarFormulario} className="grilla-formulario">
-<div className="campo">
+        <div className="campo">
             <label>ID remitente</label>
             <input type="number" name="remitente_id" value={formData.remitente_id} onChange={manejarCambio} required/>
         </div>
@@ -81,7 +90,7 @@ return (
             </select>
         </div>
 
-        <div className="campoCheckbox">
+        <div className="campo-checkbox">
             <label>
                 <input type="checkbox" name="consentimiento_datos" checked={formData.consentimiento_datos} onChange={manejarCambio} />
                 Acepto el consentimiento y tratado de datos segun la Ley 25.326

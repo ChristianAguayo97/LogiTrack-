@@ -48,3 +48,14 @@
 .btn-guardar:hover {
   background-color: #218838;
 }
+
+.botones-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-volver {
+  padding: 5px 10px;
+  cursor: pointer;
+}

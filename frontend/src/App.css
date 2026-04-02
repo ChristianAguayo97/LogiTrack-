@@ -1,31 +1,10 @@
-.contenedor {
-  padding: 20px;
-  font-family: sans-serif;
-}
-
-.tabla-envios {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.tabla-envios th,
-.tabla-envios td {
-  padding: 10px;
-  text-align: left;
-}
-
-.tabla-envios th {
-  background-color: #f4f4f4;
+.encabezado {
   border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.fila-envio {
-  border-bottom: 1px solid #ddd;
-}
-
-/* Un pequeño toque extra: efecto "hover" para que la fila se ilumine al pasar el mouse */
-.fila-envio:hover {
-  background-color: #c0dbf0;
-  cursor: pointer;
+.titulo {
+  text-decoration: none;
+  color: inherit;
 }
