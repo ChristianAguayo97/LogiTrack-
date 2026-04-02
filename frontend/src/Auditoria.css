@@ -1,42 +1,89 @@
+/* Auditoria.css */
+
+/* --- Contenedor y cabecera (Mantiene la estructura de la página) --- */
 .auditoria-contenedor {
   background-color: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 12px;
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 800px;
-  margin: 40px auto;
+  margin-top: 20px;
+}
+
+.auditoria-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .auditoria-titulo {
   color: #6f42c1;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.auditoria-mensaje {
-  color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  line-height: 1.5;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .btn-volver-auditoria {
-  padding: 10px 20px;
+  padding: 8px 15px;
   cursor: pointer;
   border: none;
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
   color: #333;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
 }
 
 .btn-volver-auditoria:hover {
   background-color: #e2e2e2;
 }
 
-.btn-volver-auditoria:active {
-  transform: scale(0.98);
+.auditoria-mensaje {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* --- ESTILOS DE LA TABLA (Idénticos a TablaEnvios) --- */
+.tabla-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-auditoria {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-auditoria th,
+.tabla-auditoria td {
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-auditoria th {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+}
+
+.fila-auditoria {
+  border-bottom: 1px solid #ddd;
+}
+
+.fila-auditoria:hover {
+  background-color: #c0dbf0; /* El hover azul que solicitaste */
+}
+
+/* --- UTILIDADES EXTRA --- */
+.celda-detalle {
+  color: #6c757d;
+  font-size: 0.85rem;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }

@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/" element={<Inicio usuarioActual={usuarioActual} />} />
           <Route path="/nuevo-envio" element={<FormularioEnvio usuarioActual={usuarioActual} />} />
           <Route path='/envio/:tracking_id' element={<DetalleEnvio usuarioActual={usuarioActual} />} />
-          <Route path='/auditoria' element={<Auditoria />} />
+          <Route path='/auditoria' element={<Auditoria usuarioActual={usuarioActual} />} />
         </Routes>
       </div>
     </BrowserRouter>
