@@ -73,17 +73,17 @@ return (
         </div>
 
         <div className="campo">
-            <label>Peso (KG)</label>
+            <label>Peso en KG</label>
             <input type="number" name="peso_paquete" value={formData.peso_paquete} onChange={manejarCambio} required/>
         </div>
 
         <div className="campo">
-            <label>Distancia (KM)</label>
+            <label>Distancia en KM</label>
             <input type="number" name="distancia_estimada" value={formData.distancia_estimada} onChange={manejarCambio} required/>
         </div>
 
         <div className="campo">
-            <label>Restricciones</label>
+            <label>Restricciones del envio</label>
             <select name="restricciones" value={formData.restricciones} onChange={manejarCambio}>
                 <option value="Ninguno">Ninguno</option>
                 <option value="Frio">Frio</option>
@@ -95,10 +95,27 @@ return (
         </div>
 
         <div className="campo">
+            <label>¿Tiene caducidad?</label>
+            <select name="tiene_caducidad" value={formData.tiene_caducidad} onChange={manejarCambio}>
+                <option value="false">No</option>
+                <option value="true">Sí</option>
+            </select>
+        </div>
+
+        <div className="campo">
             <label>Tipo de envio</label>
             <select name="tipo_envio" value={formData.tipo_envio} onChange={manejarCambio}>
                 <option value="Normal">Normal</option>
                 <option value="Express">Express</option>
+            </select>
+        </div>
+
+        <div className="campo">
+            <label>Ventana horaria</label>
+            <select name="ventana_horaria" value={formData.ventana_horario} onChange={manejarCambio}>
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
             </select>
         </div>
 
