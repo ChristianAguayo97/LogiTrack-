@@ -5,19 +5,19 @@
 node -v
 npm -v
 
-# Crear entorno vite en la carpeta "frontend"
+# 1. Crear entorno vite en la carpeta "frontend"
 npm create vite@latest frontend
 # Pasos: Select a framework: React | Select a variant: JavaScript | Install with npm and start now? Yes
 
-# Instalar la dependencia react router (para manejar varias direcciones)
+# 2. Instalar la dependencia react router (para manejar varias direcciones)
 cd frontend
 npm install react-router-dom
 
-# Instalar los paquetes para el proyecto (hay que estar en la carpeta frontend)
+# 3. Instalar los paquetes para el proyecto (hay que estar en la carpeta frontend)
 cd frontend
 npm install
 
-# Iniciar la aplicacion
+# 4. Iniciar la aplicacion
 npm run dev
 
 

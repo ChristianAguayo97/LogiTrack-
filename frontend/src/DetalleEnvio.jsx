@@ -56,7 +56,9 @@ return (
            <section className = "tarjeta-info">
                 <h3>Logistica</h3>
                 <p><strong>Estado:</strong> <span className="tag-estado">{envio.estado}</span></p>
-                <p><strong>Prioridad:</strong><span className="tag-prioridad">{envio.prioridad}</span></p>
+                <p><strong>Prioridad:</strong><span className={`tag-prioridad prioridad-${envio.prioridad?.toLowerCase() || 'default'}`}>
+                        {envio.prioridad || 'No asignada'}
+                    </span></p>
                 <p><strong>Ventana horaria:</strong> {envio.ventana_horario}</p>
                 <p><strong>Trafico ruta hasta destino:</strong> {envio.saturacion_ruta}</p>
                 <p><strong>Restricciones:</strong> {envio.restricciones}</p>

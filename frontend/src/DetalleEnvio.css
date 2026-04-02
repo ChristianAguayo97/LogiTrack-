@@ -67,3 +67,38 @@
   text-align: center;
   padding: 50px;
 }
+
+/* Nuevas etiquetas dinámicas para la Prioridad */
+.tag-prioridad {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Colores según el nivel de urgencia */
+.prioridad-alta {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.prioridad-media {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.prioridad-baja {
+  background-color: #cdffe4;
+  color: rgb(56, 65, 59);
+  border: 1px solid #baffdf;
+}
+
+/* Por si viene un valor vacío o nulo desde el backend */
+.prioridad-default {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
