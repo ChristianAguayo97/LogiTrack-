@@ -927,8 +927,6 @@ ruff check .
 # Abrir http://localhost:8000/docs
 ```
 
----
-
 ## Flujo Completo de la Aplicación
 
 ```
