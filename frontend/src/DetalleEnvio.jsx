@@ -60,7 +60,7 @@ return (
                         {envio.prioridad || 'No asignada'}
                     </span></p>
                 <p><strong>Ventana horaria:</strong> {envio.ventana_horario}</p>
-                <p><strong>Trafico ruta hasta destino:</strong> {envio.saturacion_ruta}</p>
+                <p><strong>Trafico ruta hasta destino:</strong> {(envio.saturacion_ruta * 100).toFixed(0)}%</p>
                 <p><strong>Restricciones:</strong> {envio.restricciones}</p>
                 </section>
         </div>
