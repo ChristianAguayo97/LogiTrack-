@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './FormularioEnvio.css';
 
-const FormularioEnvio = () => {
+const FormularioEnvio = ({ usuarioActual}) => {
 
     // Función que se llamará al completar el formulario para actualizar la lista de envíos
     const navigate = useNavigate();
@@ -17,7 +17,7 @@ const FormularioEnvio = () => {
         tipo_envio: 'Normal',
         ventana_horario: 'Mañana',
         saturacion_ruta: 0,
-        creado_por_usuario_id: 1,
+        creado_por_usuario_id: usuarioActual.id,
         consentimiento_datos: false
 });
 
@@ -36,10 +36,10 @@ const enviarFormulario = (e) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            // Simulacion de estar logeado como usuario
-            'x-usuario-id': '1',
-            'x-usuario-nombre': 'Usuario demo',
-            'x-usuario-rol': 'Operador'
+            // Inyectamos los datos del usuario actual
+            'x-usuario-id': usuarioActual.id.toString(),
+            'x-usuario-nombre': usuarioActual.nombre,
+            'x-usuario-rol': usuarioActual.rol
         },
         body: JSON.stringify(formData)
     }) 
