@@ -22,8 +22,26 @@ const App = () => {
       <h1>LogiTrack - Listado de envios</h1>
       <p>Lista de envios</p>
 
-      <pre style={{ background: '#f4f4f4', padding: '15px', borderRadius: '5px' }}>
-        {JSON.stringify(envios, null, 2)}</pre>
+      <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+        <thead>
+          <tr style={{ background: '#f4f4f4', borderBottom: '2px solid #ddd' }}>
+            <th style={{ padding: '10px', textAlign: 'left' }}>ID envio</th>
+            <th style={{ padding: '10px', textAlign: 'left' }}>Destinatario</th>
+            <th style={{ padding: '10px', textAlign: 'left' }}>Peso (kg)</th>
+            <th style={{ padding: '10px', textAlign: 'left' }}>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          {envios.map(envio => (
+            <tr key={envio.tracking_id} style={{ borderBottom: '1px solid #ddd' }}>
+              <td style={{ padding: '10px' }}>{envio.tracking_id} </td>
+              <td style={{ padding: '10px' }}>{envio.destinatario_id}</td>
+              <td style={{ padding: '10px' }}>{envio.peso_paquete} </td>
+              <td style={{ padding: '10px' }}>{envio.estado} </td>
+            </tr>
+          ))} 
+        </tbody>
+      </table>
     </div>
   );
 };
