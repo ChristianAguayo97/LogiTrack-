@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Inicio from './Inicio';
 import FormularioEnvio from './FormularioEnvio';
+import DetalleEnvio from './DetalleEnvio';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/nuevo-envio" element={<FormularioEnvio />} />
+          <Route path='/envio/:tracking_id' element={<DetalleEnvio />} />
         </Routes>
       </div>
     </BrowserRouter>

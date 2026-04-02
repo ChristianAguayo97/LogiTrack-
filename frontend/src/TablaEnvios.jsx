@@ -2,6 +2,7 @@
 * Componente encargado de mostrar la tabla de envíos. Recibe un array de envíos como prop y los muestra en una tabla HTML.
 */
 import './TablaEnvios.css';
+import { Link } from 'react-router-dom';
 
 const TablaEnvios = ({ envios }) => {
   return (
@@ -18,6 +19,7 @@ const TablaEnvios = ({ envios }) => {
             <th>Peso (kg)</th>
             <th>Estado</th>
             <th>Prioridad</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -30,6 +32,11 @@ const TablaEnvios = ({ envios }) => {
               <td>{envio.peso_paquete}</td>
               <td>{envio.estado}</td>
               <td>{envio.prioridad}</td>
+              <td>
+                <Link to={`/envio/${envio.tracking_id}`} className = "btn-ver-detalle">
+                Ver detalle
+                </Link>
+              </td>
             </tr>
           ))} 
         </tbody>

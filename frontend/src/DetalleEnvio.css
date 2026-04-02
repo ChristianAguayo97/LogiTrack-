@@ -1,0 +1,69 @@
+/* DetalleEnvio.css */
+.detalle-pagina {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.detalle-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.btn-vuelve {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.tarjeta-info {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.tarjeta-info h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #0056b3;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.tag-estado {
+  background: #e3f2fd;
+  color: #0d47a1;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.tag-prioridad {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.error-contenedor {
+  text-align: center;
+  padding: 50px;
+}
