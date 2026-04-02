@@ -1,0 +1,50 @@
+.formulario-tarjeta {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.grilla-formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide el formulario en 2 columnas */
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.campo input, .campo select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campo-checkbox {
+  grid-column: span 2; /* Ocupa las dos columnas */
+  margin-top: 10px;
+}
+
+.btn-guardar {
+  grid-column: span 2;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-guardar:hover {
+  background-color: #218838;
+}

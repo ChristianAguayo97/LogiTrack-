@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import FormularioEnvio from './FormularioEnvio';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
       <h1>LogiTrack - Panel de control</h1>
       <p>Lista de envios</p>
 
+      <FormularioEnvio alCompletar={() => buscarEnvios('')} />
       <table className='tabla-envios'>
         <thead>
           <tr>
