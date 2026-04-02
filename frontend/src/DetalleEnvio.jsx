@@ -107,6 +107,7 @@ return (
                             <option value="Pendiente">Pendiente</option>
                             <option value="En transito">En tránsito</option>
                             <option value="Entregado">Entregado</option>
+                            <option value="Cancelado">Cancelado</option>
                         </select>
                         <button onClick={cambiarEstado} className = "btn-actualizar">
                             Actualizar
