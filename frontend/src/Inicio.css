@@ -9,25 +9,30 @@
     padding: 10px 15px;
     background-color: #28a745;
     color: white;
+    text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
-/* Agrupador de botones para que queden uno al lado del otro */
+.boton-nuevo-envio:hover {
+    background-color: #269941;
+}
+
 .acciones-inicio {
     display: flex;
     gap: 15px;
     align-items: center;
 }
 
-/* Estilos para el botón exclusivo de Supervisor */
 .boton-auditoria {
     padding: 10px 15px;
     background-color: #6f42c1;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
     transition: background-color 0.2s ease;
 }

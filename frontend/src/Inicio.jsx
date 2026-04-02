@@ -51,7 +51,7 @@ const Inicio = ({ usuarioActual }) => {
               {usuarioActual?.rol?.toLowerCase() === 'supervisor' && (
                 <Link to="/auditoria" className="boton-auditoria">Auditoria</Link>
               )}
-              <Link to="/nuevo-envio" className="boton-nuevo-envio">+ Nuevo envio</Link>
+              <Link to="/nuevo-envio" className="boton-nuevo-envio">Nuevo envio</Link>
             </div>
         </div>
 
