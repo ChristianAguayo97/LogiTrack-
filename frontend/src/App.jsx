@@ -7,16 +7,21 @@ const App = () => {
   // Constante que guarda los envios, inicialmente es un array vacio
   const [envios, setEnvios] = useState([]);
   
-  /*
-  * useEffect: es un hook de React que permite sincronizar un componente con un sistema externo (el backend por ejemplo)
-  *  https://react.dev/reference/react/useEffect
-  *  https://react.dev/learn/synchronizing-with-effects
-  */
-  useEffect(() => {
+  const cargarEnvios = () => {
     fetch('http://127.0.0.1:8000/envios')
       .then(response => response.json())
       .then(data => setEnvios(data))
       .catch(error => console.error('Error fetching envios:', error));
+  };
+
+  /*
+  * useEffect: es un hook de React que permite sincronizar un componente con un sistema externo (el backend por ejemplo)
+  * En este caso, se utiliza para cargar la lista de envios cuando la pagina se inicia.
+  *  https://react.dev/reference/react/useEffect
+  *  https://react.dev/learn/synchronizing-with-effects
+  */
+  useEffect(() => {
+    cargarEnvios();
   }   , []);
 
   return (
@@ -24,7 +29,7 @@ const App = () => {
       <h1>LogiTrack - Panel de control</h1>
       <p>Lista de envios</p>
 
-      <FormularioEnvio alCompletar={() => buscarEnvios('')} />
+      <FormularioEnvio alCompletar={() => cargarEnvios()} />
       <table className='tabla-envios'>
         <thead>
           <tr>
