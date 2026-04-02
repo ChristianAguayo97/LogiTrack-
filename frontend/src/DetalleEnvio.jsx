@@ -2,21 +2,55 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import './DetalleEnvio.css';
 
-const DetalleEnvio = () => {
+const DetalleEnvio = ({ usuarioActual}) => {
   const { tracking_id } = useParams(); //Captura el ID desde la URL
   const navigate = useNavigate();
   const [envio, setEnvio] = useState(null);
   const [error, setError] = useState(null);
 
-useEffect(() => {
+  // Estado para el nuevo estado del envío
+  const [nuevoEstado, setNuevoEstado] = useState('');
+
+  const obtenerDetalle = () => {
     fetch(`http://127.0.0.1:8000/envios/${tracking_id}`)
         .then(response => {
             if (!response.ok) throw new Error('Error al obtener el envío');
             return response.json();
         })
-        .then(data => setEnvio(data))
+        .then(data => {
+            setEnvio(data)
+            setNuevoEstado(data.estado); // Inicializa el nuevo estado con el estado actual del envío
+        })
         .catch(err => setError(err.message));
+  }
+
+useEffect(() => {
+    obtenerDetalle();
 }, [tracking_id]);
+
+const cambiarEstado = () => {
+    if (!nuevoEstado) return;
+
+    fetch(`http://127.0.0.1:8000/envios/${tracking_id}/estado?estado=${nuevoEstado}`, {
+        method: 'PATCH',
+        headers: {
+            'accept': 'application/json',
+            'x-usuario-id': usuarioActual.id,
+            'x-usuario-nombre': usuarioActual.nombre,
+            'x-usuario-rol': usuarioActual.rol
+
+        }
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Error al cambiar el estado');
+        return response.json();
+    })
+    .then(() => {
+        alert('Estado actualizado con éxito');
+        obtenerDetalle(); // Refresca los detalles del envío para mostrar el nuevo estado
+    })
+    .catch(err => alert(err.message));
+};
 
 if (error) return (
     <div className="error-contenedor">
@@ -62,7 +96,24 @@ return (
                 <p><strong>Ventana horaria:</strong> {envio.ventana_horario}</p>
                 <p><strong>Trafico ruta hasta destino:</strong> {(envio.saturacion_ruta * 100).toFixed(0)}%</p>
                 <p><strong>Restricciones:</strong> {envio.restricciones}</p>
+            </section>
+
+            {/* Opciones del supervisor */}
+            {usuarioActual.rol === 'Supervisor' && (
+                <section className="tarjeta-info panel-supervisor">
+                    <p>Cambiar el estado del envio:</p>
+                    <div className = "controles-supervisor">
+                        <select value={nuevoEstado} onChange = {(e) => setNuevoEstado(e.target.value)} className = "selector-estado">
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="En transito">En tránsito</option>
+                            <option value="Entregado">Entregado</option>
+                        </select>
+                        <button onClick={cambiarEstado} className = "btn-actualizar">
+                            Actualizar
+                        </button>
+                    </div>
                 </section>
+            )}
         </div>
     </div>
 );
