@@ -1,16 +1,36 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import FormularioEnvio from './FormularioEnvio';
+import BuscadorEnvios from './BuscadorEnvios';
+import TablaEnvios from './TablaEnvios';
 
 const App = () => {
 
   // Constante que guarda los envios, inicialmente es un array vacio
   const [envios, setEnvios] = useState([]);
   
-  const cargarEnvios = () => {
-    fetch('http://127.0.0.1:8000/envios')
-      .then(response => response.json())
-      .then(data => setEnvios(data))
+  const cargarEnvios = (idParaBuscar = '') => {
+    // Verifica si se proporcionó un ID para buscar, y construye la URL adecuada
+    const url = idParaBuscar 
+      ? `http://127.0.0.1:8000/envios/${idParaBuscar}`
+      : 'http://127.0.0.1:8000/envios';
+
+    // Realiza la solicitud al backend para obtener los envíos (o el envío específico)
+    fetch(url)
+      .then(response => {
+        if (response.status === 404) return null;
+        if (!response.ok) throw new Error('Error al cargar los envíos');
+        return response.json();
+      })
+      .then(data => {
+        if (data == null) {
+          setEnvios([]);
+        } else if (Array.isArray(data)) {
+          setEnvios(data);
+        } else {
+          setEnvios([data]);
+        }
+      })
       .catch(error => console.error('Error fetching envios:', error));
   };
 
@@ -27,35 +47,9 @@ const App = () => {
   return (
     <div className='contenedor'>
       <h1>LogiTrack - Panel de control</h1>
-      <p>Lista de envios</p>
-
       <FormularioEnvio alCompletar={() => cargarEnvios()} />
-      <table className='tabla-envios'>
-        <thead>
-          <tr>
-            <th>Tracking ID</th>
-            <th>Fecha de alta</th>
-            <th>Remitente ID</th>
-            <th>Destinatario ID</th>
-            <th>Peso (kg)</th>
-            <th>Estado</th>
-            <th>Prioridad</th>
-          </tr>
-        </thead>
-        <tbody>
-          {envios.map(envio => (
-            <tr key={envio.tracking_id} className='fila-envio'>
-              <td>{envio.tracking_id}</td>
-              <td>{envio.f_creacion}</td>
-              <td>{envio.remitente_id}</td>
-              <td>{envio.destinatario_id}</td>
-              <td>{envio.peso_paquete}</td>
-              <td>{envio.estado}</td>
-              <td>{envio.prioridad}</td>
-            </tr>
-          ))} 
-        </tbody>
-      </table>
+      <BuscadorEnvios onBuscar={cargarEnvios} />
+      <TablaEnvios envios={envios} />
     </div>
   );
 };
