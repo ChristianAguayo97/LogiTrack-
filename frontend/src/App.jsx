@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './App.css';
 
 const App = () => {
 
@@ -18,26 +19,26 @@ const App = () => {
   }   , []);
 
   return (
-    <div style={{ padding: '20px' , fontFamily: 'sans-serif' }}>
-      <h1>LogiTrack - Listado de envios</h1>
+    <div className='contenedor'>
+      <h1>LogiTrack - Panel de control</h1>
       <p>Lista de envios</p>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+      <table className='tabla-envios'>
         <thead>
-          <tr style={{ background: '#f4f4f4', borderBottom: '2px solid #ddd' }}>
-            <th style={{ padding: '10px', textAlign: 'left' }}>ID envio</th>
-            <th style={{ padding: '10px', textAlign: 'left' }}>Destinatario</th>
-            <th style={{ padding: '10px', textAlign: 'left' }}>Peso (kg)</th>
-            <th style={{ padding: '10px', textAlign: 'left' }}>Estado</th>
+          <tr>
+            <th>ID envio</th>
+            <th>Destinatario</th>
+            <th>Peso (kg)</th>
+            <th>Estado</th>
           </tr>
         </thead>
         <tbody>
           {envios.map(envio => (
-            <tr key={envio.tracking_id} style={{ borderBottom: '1px solid #ddd' }}>
-              <td style={{ padding: '10px' }}>{envio.tracking_id} </td>
-              <td style={{ padding: '10px' }}>{envio.destinatario_id}</td>
-              <td style={{ padding: '10px' }}>{envio.peso_paquete} </td>
-              <td style={{ padding: '10px' }}>{envio.estado} </td>
+            <tr key={envio.tracking_id} className='fila-envio'>
+              <td>{envio.tracking_id}</td>
+              <td>{envio.destinatario_id}</td>
+              <td>{envio.peso_paquete}</td>
+              <td>{envio.estado}</td>
             </tr>
           ))} 
         </tbody>
