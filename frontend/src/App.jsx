@@ -5,6 +5,7 @@ import Inicio from './Inicio';
 import FormularioEnvio from './FormularioEnvio';
 import DetalleEnvio from './DetalleEnvio';
 import SimularUsuario from './SimularUsuario';
+import Auditoria from './Auditoria';
 
 const App = () => {
 
@@ -34,9 +35,10 @@ const App = () => {
         </header>
 
         <Routes>
-          <Route path="/" element={<Inicio />} />
+          <Route path="/" element={<Inicio usuarioActual={usuarioActual} />} />
           <Route path="/nuevo-envio" element={<FormularioEnvio usuarioActual={usuarioActual} />} />
           <Route path='/envio/:tracking_id' element={<DetalleEnvio usuarioActual={usuarioActual} />} />
+          <Route path='/auditoria' element={<Auditoria />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -4,7 +4,7 @@ import BuscadorEnvios from './BuscadorEnvios';
 import TablaEnvios from './TablaEnvios';
 import './Inicio.css';
 
-const Inicio = () => {
+const Inicio = ({ usuarioActual }) => {
   const [envios, setEnvios] = useState([]);
   
   const cargarEnvios = (idParaBuscar = '') => {
@@ -46,7 +46,13 @@ const Inicio = () => {
     <div>
         <div className='panel-envios'>
             <h2>Panel de envios</h2>
-            <Link to="/nuevo-envio" className="boton-nuevo-envio">+ Nuevo envio</Link>
+            <div className = "acciones-inicio">
+              {/* Boton condicional que aparece solo si el usuario es supervisor */}
+              {usuarioActual?.rol?.toLowerCase() === 'supervisor' && (
+                <Link to="/auditoria" className="boton-auditoria">Auditoria</Link>
+              )}
+              <Link to="/nuevo-envio" className="boton-nuevo-envio">+ Nuevo envio</Link>
+            </div>
         </div>
 
         <BuscadorEnvios onBuscar={cargarEnvios} />

@@ -1,0 +1,42 @@
+.auditoria-contenedor {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.auditoria-titulo {
+  color: #6f42c1;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.auditoria-mensaje {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-volver-auditoria {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-volver-auditoria:hover {
+  background-color: #e2e2e2;
+}
+
+.btn-volver-auditoria:active {
+  transform: scale(0.98);
+}
