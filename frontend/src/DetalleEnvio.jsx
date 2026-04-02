@@ -89,7 +89,9 @@ return (
 
            <section className = "tarjeta-info">
                 <h3>Logistica</h3>
-                <p><strong>Estado:</strong> <span className="tag-estado">{envio.estado}</span></p>
+                <p><strong>Estado:</strong> <span className={`tag-estado estado-${envio.estado?.toLowerCase().replace(' ', '-') || 'default'}`}>
+                        {envio.estado}
+                    </span></p>
                 <p><strong>Prioridad:</strong><span className={`tag-prioridad prioridad-${envio.prioridad?.toLowerCase() || 'default'}`}>
                         {envio.prioridad || 'No asignada'}
                     </span></p>
