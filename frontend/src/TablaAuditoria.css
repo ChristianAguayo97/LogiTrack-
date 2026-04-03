@@ -1,0 +1,39 @@
+/* --- ESTILOS DE LA TABLA (Idénticos a TablaEnvios) --- */
+.tabla-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-auditoria {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-auditoria th,
+.tabla-auditoria td {
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-auditoria th {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+}
+
+.fila-auditoria {
+  border-bottom: 1px solid #ddd;
+}
+
+.fila-auditoria:hover {
+  background-color: #c0dbf0;
+}
+
+.celda-detalle {
+  color: #6c757d;
+  font-size: 0.85rem;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
