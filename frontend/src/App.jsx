@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Inicio from './Inicio';
-import FormularioEnvio from './FormularioEnvio';
-import DetalleEnvio from './DetalleEnvio';
+import FormularioEnvio from './envios/FormularioEnvio';
+import DetalleEnvio from './envios/DetalleEnvio';
 import SimularUsuario from './SimularUsuario';
 import Auditoria from './auditoria/Auditoria';
 import { useUsuario } from './useUsuario';

@@ -1,7 +1,7 @@
 /*
 * Componente encargado de mostrar la tabla de envíos. Recibe un array de envíos como prop y los muestra en una tabla HTML.
 */
-import { formatearFecha } from './helpers/formatearFecha';
+import { formatearFecha } from '../helpers/formatearFecha';
 import './TablaEnvios.css';
 import { Link } from 'react-router-dom';
 

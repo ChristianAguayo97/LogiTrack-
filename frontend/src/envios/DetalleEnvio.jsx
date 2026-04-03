@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { formatearFecha } from './helpers/formatearFecha';
+import { formatearFecha } from '../helpers/formatearFecha';
 import './DetalleEnvio.css';
 
 const DetalleEnvio = ({ usuarioActual}) => {

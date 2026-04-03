@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import BuscadorEnvios from './BuscadorEnvios';
-import TablaEnvios from './TablaEnvios';
+import BuscadorEnvios from './envios/BuscadorEnvios';
+import TablaEnvios from './envios/TablaEnvios';
 import './Inicio.css';
 
 const Inicio = ({ usuarioActual }) => {
