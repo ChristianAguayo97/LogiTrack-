@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
 import './App.css';
 import Inicio from './Inicio';
 import FormularioEnvio from './FormularioEnvio';
@@ -11,7 +10,7 @@ import { useUsuario } from './useUsuario';
 const App = () => {
 
   const { usuarioActual, alternarUsuario } = useUsuario();
-  
+
   return (
     <BrowserRouter>
       <div className='contenedor'>

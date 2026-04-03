@@ -2,12 +2,20 @@ import { useNavigate } from "react-router-dom";
 import './Auditoria.css';
 import TablaAuditoria from "./TablaAuditoria";
 import BuscadorAuditorias from "./BuscadorAuditorias";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 
 const Auditoria = ( {usuarioActual} ) => {
     const navigate = useNavigate();
     const [auditorias, setAuditorias] = useState([]);
     const [error, setError] = useState(null);
+
+    // Verificar que el usuario tenga rol de Supervisor, si no redirigir al inicio
+    useEffect(() => {
+        if (usuarioActual.rol !== 'Supervisor') {
+            alert('Acceso denegado. Solo los supervisores pueden acceder a la auditoria.');
+            navigate('/');
+        }
+    }   , [usuarioActual, navigate]);
 
     const cargarAuditorias = (idUsuarioParaBuscar = '') => {
 
