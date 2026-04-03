@@ -3,9 +3,9 @@ import './App.css';
 import Inicio from './Inicio';
 import FormularioEnvio from './envios/FormularioEnvio';
 import DetalleEnvio from './envios/DetalleEnvio';
-import SimularUsuario from './SimularUsuario';
+import SimularUsuario from './usuarios/SimularUsuario';
 import Auditoria from './auditoria/Auditoria';
-import { useUsuario } from './useUsuario';
+import { useUsuario } from './usuarios/useUsuario';
 
 const App = () => {
 
