@@ -1,0 +1,48 @@
+/* Auditoria.css */
+
+/* --- Contenedor y cabecera (Mantiene la estructura de la página) --- */
+.auditoria-contenedor {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.auditoria-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.auditoria-titulo {
+  color: #6f42c1;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.btn-volver-auditoria {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.btn-volver-auditoria:hover {
+  background-color: #e2e2e2;
+}
+
+.auditoria-mensaje {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}

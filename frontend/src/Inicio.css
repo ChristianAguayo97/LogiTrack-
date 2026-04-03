@@ -1,0 +1,42 @@
+.panel-envios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.boton-nuevo-envio {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.boton-nuevo-envio:hover {
+    background-color: #269941;
+}
+
+.acciones-inicio {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.boton-auditoria {
+    padding: 10px 15px;
+    background-color: #6f42c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.boton-auditoria:hover {
+    background-color: #5a32a3;
+}

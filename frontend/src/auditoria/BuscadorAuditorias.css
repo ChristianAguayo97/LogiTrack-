@@ -1,0 +1,57 @@
+.buscador-contenedor {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.buscador-formulario {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.buscador-input {
+  padding: 8px 12px;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.buscador-input:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.btn-buscar {
+  padding: 8px 15px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-buscar:hover {
+  background-color: #004494;
+}
+
+.btn-limpiar {
+  padding: 8px 15px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-limpiar:hover {
+  background-color: #5a6268;
+}
