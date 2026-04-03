@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import './Auditoria.css';
 import TablaAuditoria from "./TablaAuditoria";
+import BuscadorAuditorias from "./BuscadorAuditorias";
 import { useState, useEffect } from "react";
 
 const Auditoria = ( {usuarioActual} ) => {
@@ -8,9 +9,13 @@ const Auditoria = ( {usuarioActual} ) => {
     const [auditorias, setAuditorias] = useState([]);
     const [error, setError] = useState(null);
 
-    const cargarAuditorias = () => {
+    const cargarAuditorias = (idUsuarioParaBuscar = '') => {
 
-        fetch('http://127.0.0.1:8000/auditoria/?skip=0&limit=100', {
+        const url = idUsuarioParaBuscar
+            ? `http://127.0.0.1:8000/auditoria/usuarios/${idUsuarioParaBuscar}?skip=0&limit=100`
+            : 'http://127.0.0.1:8000/auditoria/?skip=0&limit=100';
+
+        fetch(url, {
             method: 'GET',
             headers: {
                 'accept': 'application/json',
@@ -20,11 +25,18 @@ const Auditoria = ( {usuarioActual} ) => {
             }
         })
             .then(response => {
+                if (response.status === 404) return null;
                 if (!response.ok) throw new Error('Error al cargar auditorias');
                 return response.json();
             })
             .then(data => {
+                if (data == null) {
+                setAuditorias([]);
+                } else if (Array.isArray(data)) {
                 setAuditorias(data);
+                } else {
+                setAuditorias([data]);
+                }
             })
             .catch(err => {
                 setError(err.message);
@@ -44,6 +56,7 @@ const Auditoria = ( {usuarioActual} ) => {
                 </button>
             </div>
             
+            <BuscadorAuditorias onBuscarAuditorias={cargarAuditorias} />
             <TablaAuditoria auditorias={auditorias} />
         </div>
     );
