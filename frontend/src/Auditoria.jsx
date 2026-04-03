@@ -11,6 +11,7 @@ const Auditoria = ( {usuarioActual} ) => {
 
     const cargarAuditorias = (idUsuarioParaBuscar = '') => {
 
+    
         const url = idUsuarioParaBuscar
             ? `http://127.0.0.1:8000/auditoria/usuarios/${idUsuarioParaBuscar}?skip=0&limit=100`
             : 'http://127.0.0.1:8000/auditoria/?skip=0&limit=100';
