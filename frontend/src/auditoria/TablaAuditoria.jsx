@@ -1,5 +1,5 @@
 import './TablaAuditoria.css';
-import { formatearFecha } from './helpers/formatearFecha';
+import { formatearFecha } from '../helpers/formatearFecha';
 
 const TablaAuditoria = ({ auditorias }) => {
     return (

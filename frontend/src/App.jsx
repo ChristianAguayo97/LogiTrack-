@@ -4,7 +4,7 @@ import Inicio from './Inicio';
 import FormularioEnvio from './FormularioEnvio';
 import DetalleEnvio from './DetalleEnvio';
 import SimularUsuario from './SimularUsuario';
-import Auditoria from './Auditoria';
+import Auditoria from './auditoria/Auditoria';
 import { useUsuario } from './useUsuario';
 
 const App = () => {
