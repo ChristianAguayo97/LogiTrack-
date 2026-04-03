@@ -16,11 +16,11 @@ const BuscadorAuditorias = ({ onBuscarAuditorias }) => {
 
   return (
     <div className="buscador-contenedor">
-        <p>Buscar auditoría por ID usuario</p>
+        <p>Buscar auditoría por ID supervisor</p>
         <form onSubmit={manejarBusqueda} className="buscador-formulario">
         <input 
           type="number" 
-          placeholder="Buscar por ID usuario exacto..." 
+          placeholder="Buscar por supervisor ID..." 
           value={busquedaId}
           onChange={(e) => setBusquedaId(e.target.value)}
           className="buscador-input"

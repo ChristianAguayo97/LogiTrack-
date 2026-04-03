@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { formatearFecha } from './helpers/formatearFecha';
 import './DetalleEnvio.css';
 
 const DetalleEnvio = ({ usuarioActual}) => {
@@ -84,7 +85,7 @@ return (
                 <p><strong>Distancia:</strong> {envio.distancia}</p>
                 <p><strong>Tipo:</strong> {envio.tipo_envio}</p>
                 <p><strong>Caducidad:</strong> {envio.tiene_caducidad ? 'Sí' : 'No'}</p>
-                <p><strong>Fecha de creacion:</strong> {envio.f_creacion}</p>
+                <p><strong>Fecha de creacion:</strong> {formatearFecha(envio.f_creacion)}</p>
             </section>
 
            <section className = "tarjeta-info">

@@ -1,4 +1,5 @@
 import './TablaAuditoria.css';
+import { formatearFecha } from './helpers/formatearFecha';
 
 const TablaAuditoria = ({ auditorias }) => {
     return (
@@ -10,8 +11,8 @@ const TablaAuditoria = ({ auditorias }) => {
                         <th>Fecha y hora</th>
                         <th>Acción</th>
                         <th>ID Envío</th>
-                        <th>ID Usuario</th>
-                        <th>Nombre usuario</th>
+                        <th>ID Supervisor</th>
+                        <th>Nombre Supervisor</th>
                         <th>Rol</th>
                         <th>Detalle</th>
                         </tr>
@@ -20,7 +21,7 @@ const TablaAuditoria = ({ auditorias }) => {
                 {auditorias.map(registro => ( 
                     <tr key={registro.id} className = "fila-auditoria">
                         <td>{registro.id}</td>
-                        <td>{registro.f_accion}</td>
+                        <td>{formatearFecha(registro.f_accion)}</td>
                         <td>{registro.accion}</td>
                         <td>{registro.envio_id}</td>
                         <td>{registro.usuario_id}</td>

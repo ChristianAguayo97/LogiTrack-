@@ -1,6 +1,7 @@
 /*
 * Componente encargado de mostrar la tabla de envíos. Recibe un array de envíos como prop y los muestra en una tabla HTML.
 */
+import { formatearFecha } from './helpers/formatearFecha';
 import './TablaEnvios.css';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +27,7 @@ const TablaEnvios = ({ envios }) => {
           {envios.map(envio => (
             <tr key={envio.tracking_id} className='fila-envio'>
               <td>{envio.tracking_id}</td>
-              <td>{envio.f_creacion}</td>
+              <td>{formatearFecha(envio.f_creacion)}</td>
               <td>{envio.remitente_id}</td>
               <td>{envio.destinatario_id}</td>
               <td>{envio.peso_paquete}</td>
