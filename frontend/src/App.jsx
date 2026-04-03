@@ -6,23 +6,12 @@ import FormularioEnvio from './FormularioEnvio';
 import DetalleEnvio from './DetalleEnvio';
 import SimularUsuario from './SimularUsuario';
 import Auditoria from './Auditoria';
+import { useUsuario } from './useUsuario';
 
 const App = () => {
 
-  const [usuarioActual, setUsuarioActual] = useState({
-      id : 1,
-      nombre : "Usuario demo",
-      rol: "Operador"
-  });
-
-  const alternarUsuario = () => {
-    setUsuarioActual(prevUsuario => 
-      prevUsuario.rol === 'Operador' 
-        ? { id: 2, nombre: 'Supervisor Demo', rol: 'Supervisor' }
-        : { id: 1, nombre: 'Usuario Demo', rol: 'Operador' }
-    );
-  };
-
+  const { usuarioActual, alternarUsuario } = useUsuario();
+  
   return (
     <BrowserRouter>
       <div className='contenedor'>
