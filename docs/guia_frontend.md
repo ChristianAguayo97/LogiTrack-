@@ -1,9 +1,25 @@
 ## Comandos para el front end
 
 ```bash
-# Comprobar version node y npm (requiere instalar node.js en tu computadora)
+# ----------------------------------------
+# SERIE DE PASOS PARA CORRER EL FRONT END:
+# ----------------------------------------
+# PASO 1: Comprobar version node y npm (si no dice la version, es porque tenes que instalar node.js en tu computadora)
 node -v
 npm -v
+# PASO 2: Instalar todas las dependencias (npm lee el package.json)
+npm install
+
+# PASO 3: Iniciar el servidor de desarrollo
+npm run dev
+
+# PASO 4 (o en cualquier momento): En otra consola, ejecutar el backend (fastapi dev src/main.py)
+
+# Servidor corriendo, ir a http://localhost:5173/
+
+# -------------------------------------------------------
+# Pasos utilizados por primera vez para crear el entorno:
+# -------------------------------------------------------
 
 # 1. Crear entorno vite en la carpeta "frontend"
 npm create vite@latest frontend
