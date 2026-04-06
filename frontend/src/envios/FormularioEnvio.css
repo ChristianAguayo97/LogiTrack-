@@ -30,7 +30,7 @@
 }
 
 .campo-checkbox {
-  grid-column: span 2; /* Ocupa las dos columnas */
+  grid-column: span 2;
   margin-top: 10px;
 }
 
@@ -43,6 +43,7 @@
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .btn-guardar:hover {
@@ -56,6 +57,17 @@
 }
 
 .btn-volver {
-  padding: 5px 10px;
+  padding: 8px 15px;
   cursor: pointer;
+  border: none;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.btn-volver:hover {
+  background-color: #e2e2e2;
 }
