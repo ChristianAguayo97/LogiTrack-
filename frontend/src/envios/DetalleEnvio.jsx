@@ -81,8 +81,8 @@ return (
 
             <section className="tarjeta-info">
                 <h3>Datos del paquete</h3>
-                <p><strong>Peso:</strong> {envio.peso_paquete}</p>
-                <p><strong>Distancia:</strong> {envio.distancia}</p>
+                <p><strong>Peso (en Kilogramos):</strong> {envio.peso_paquete}</p>
+                <p><strong>Distancia (en Kilómetros):</strong> {envio.distancia_estimada}</p>
                 <p><strong>Tipo:</strong> {envio.tipo_envio}</p>
                 <p><strong>Caducidad:</strong> {envio.tiene_caducidad ? 'Sí' : 'No'}</p>
                 <p><strong>Fecha de creacion:</strong> {formatearFecha(envio.f_creacion)}</p>
