@@ -15,12 +15,11 @@ const BuscadorEnvios = ({ onBuscar }) => {
   };
 
   return (
-    <div className="buscador-contenedor">
-        <p>Buscar envio por tracking ID</p>
+    <div className="buscador-envios-contenedor">
         <form onSubmit={manejarBusqueda} className="buscador-formulario">
         <input 
           type="number" 
-          placeholder="Buscar por Tracking ID exacto..." 
+          placeholder="Buscar por Tracking ID..." 
           value={busquedaId}
           onChange={(e) => setBusquedaId(e.target.value)}
           className="buscador-input"

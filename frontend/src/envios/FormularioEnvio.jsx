@@ -112,7 +112,7 @@ return (
 
         <div className="campo">
             <label>Ventana horaria</label>
-            <select name="ventana_horaria" value={formData.ventana_horario} onChange={manejarCambio}>
+            <select name="ventana_horaria" value={formData.ventana_horaria} onChange={manejarCambio}>
                 <option value="Mañana">Mañana</option>
                 <option value="Tarde">Tarde</option>
                 <option value="Noche">Noche</option>

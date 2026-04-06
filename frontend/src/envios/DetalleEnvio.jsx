@@ -70,55 +70,49 @@ return (
             <h2>Envio #{envio.tracking_id}</h2>
         </div>
 
-        <div className="detalle-grid">
-            <section className = "tarjeta-info">
-                <h3>Informacion personal</h3>
-                <p><strong>Remitente ID:</strong> {envio.remitente_id}</p>
-                <p><strong>Destinatario ID:</strong> {envio.destinatario_id}</p>
-                <p><strong>Creado por usuario ID:</strong> {envio.creado_por_usuario_id}</p>
-
-            </section>
-
-            <section className="tarjeta-info">
-                <h3>Datos del paquete</h3>
-                <p><strong>Peso:</strong> {envio.peso_paquete}</p>
-                <p><strong>Distancia:</strong> {envio.distancia}</p>
-                <p><strong>Tipo:</strong> {envio.tipo_envio}</p>
-                <p><strong>Caducidad:</strong> {envio.tiene_caducidad ? 'Sí' : 'No'}</p>
-                <p><strong>Fecha de creacion:</strong> {formatearFecha(envio.f_creacion)}</p>
-            </section>
-
-           <section className = "tarjeta-info">
-                <h3>Logistica</h3>
-                <p><strong>Estado:</strong> <span className={`tag-estado estado-${envio.estado?.toLowerCase().replace(' ', '-') || 'default'}`}>
-                        {envio.estado}
-                    </span></p>
-                <p><strong>Prioridad:</strong><span className={`tag-prioridad prioridad-${envio.prioridad?.toLowerCase() || 'default'}`}>
-                        {envio.prioridad || 'No asignada'}
-                    </span></p>
-                <p><strong>Ventana horaria:</strong> {envio.ventana_horario}</p>
-                <p><strong>Trafico ruta hasta destino:</strong> {(envio.saturacion_ruta * 100).toFixed(0)}%</p>
-                <p><strong>Restricciones:</strong> {envio.restricciones}</p>
-            </section>
-
-            {/* Opciones del supervisor */}
-            {usuarioActual.rol === 'Supervisor' && (
-                <section className="tarjeta-info panel-supervisor">
-                    <p>Cambiar el estado del envio:</p>
-                    <div className = "controles-supervisor">
-                        <select value={nuevoEstado} onChange = {(e) => setNuevoEstado(e.target.value)} className = "selector-estado">
-                            <option value="Pendiente">Pendiente</option>
-                            <option value="En transito">En tránsito</option>
-                            <option value="Entregado">Entregado</option>
-                            <option value="Cancelado">Cancelado</option>
-                        </select>
-                        <button onClick={cambiarEstado} className = "btn-actualizar">
-                            Actualizar
-                        </button>
-                    </div>
-                </section>
-            )}
+        <div className="detalle-lista">
+            <p><strong>Remitente ID:</strong> {envio.remitente_id}</p>
+            <p><strong>Destinatario ID:</strong> {envio.destinatario_id}</p>
+            <p><strong>Creado por usuario ID:</strong> {envio.creado_por_usuario_id}</p>
+            <p><strong>Peso del paquete:</strong> {envio.peso_paquete} kg</p>
+            <p><strong>Distancia estimada:</strong> {envio.distancia_estimada} km</p>
+            <p><strong>Tipo de envío:</strong> {envio.tipo_envio}</p>
+            <p><strong>Caducidad:</strong> {envio.tiene_caducidad ? 'Sí' : 'No'}</p>
+            <p><strong>Fecha de creación:</strong> {formatearFecha(envio.f_creacion)}</p>
+            <p>
+                <strong>Estado:</strong> 
+                <span className={`tag-estado estado-${envio.estado?.toLowerCase().replace(' ', '-') || 'default'}`}>
+                {envio.estado}
+                </span>
+            </p>
+            <p>
+                <strong>Prioridad:</strong>
+                <span className={`tag-prioridad prioridad-${envio.prioridad?.toLowerCase() || 'default'}`}>
+                {envio.prioridad || 'No asignada'}
+                </span>
+            </p>
+            <p><strong>Ventana horaria:</strong> {envio.ventana_horario}</p>
+            <p><strong>Tráfico ruta hasta destino:</strong> {(envio.saturacion_ruta * 100).toFixed(0)}%</p>
+            <p><strong>Restricciones:</strong> {envio.restricciones}</p>
         </div>
+
+        {/* Opciones del supervisor (Ahora fuera de la grilla) */}
+        {usuarioActual.rol === 'Supervisor' && (
+            <div className="panel-supervisor">
+                <p><strong>Cambiar el estado del envio:</strong></p>
+                <div className="controles-supervisor">
+                    <select value={nuevoEstado} onChange={(e) => setNuevoEstado(e.target.value)} className="selector-estado">
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En transito">En tránsito</option>
+                        <option value="Entregado">Entregado</option>
+                        <option value="Cancelado">Cancelado</option>
+                    </select>
+                    <button onClick={cambiarEstado} className="btn-actualizar">
+                      Actualizar
+                    </button>
+                </div>
+            </div>
+          )}
     </div>
 );
 

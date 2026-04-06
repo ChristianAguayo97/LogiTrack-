@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 const TablaEnvios = ({ envios }) => {
   return (
     <div>
-      <p>Lista de envíos</p>
-      
       <table className='tabla-envios'>
         <thead>
           <tr>
