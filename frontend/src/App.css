@@ -1,10 +1,78 @@
-.encabezado {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+/* src/App.css */
+
+/* Ocupar toda la pantalla y quitar márgenes por defecto */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6;
 }
 
-.titulo {
+.contenedor-app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* --- ESTILOS DE LA BARRA LATERAL --- */
+.sidebar {
+  width: 260px;
+  background-color: #0f172b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empuja el logo arriba y el perfil abajo */
+  padding: 30px 20px;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
   text-decoration: none;
-  color: inherit;
+}
+
+/* --- ESTILOS DEL PERFIL (Abajo a la izquierda) --- */
+.perfil-usuario {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.avatar {
+  font-size: 2.5rem;
+  background-color: #3498db;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+}
+
+.nombre-usuario { margin: 0; font-weight: bold; font-size: 1.1rem; }
+.rol-usuario { margin: 5px 0 15px 0; font-size: 0.9rem; color: #adb5bd; }
+
+.btn-cambiar-rol {
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #3498db;
+  color: #3498db;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-cambiar-rol:hover { background-color: #3498db; color: white; }
+
+/* --- CONTENIDO PRINCIPAL --- */
+.contenido-principal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  overflow-y: auto;
 }
