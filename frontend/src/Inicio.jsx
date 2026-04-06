@@ -45,7 +45,7 @@ const Inicio = ({ usuarioActual }) => {
   return (
     <div>
         <div className='panel-envios'>
-            <h2>Panel de envios</h2>
+            <h2>Gestión de envios</h2>
             <div className = "acciones-inicio">
               {/* Boton condicional que aparece solo si el usuario es supervisor */}
               {usuarioActual?.rol?.toLowerCase() === 'supervisor' && (
