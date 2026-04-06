@@ -32,7 +32,7 @@
   color: #6c757d;
   font-size: 0.85rem;
   max-width: 250px;
-  white-space: nowrap;
+
   overflow: hidden;
-  text-overflow: ellipsis; 
+
 }
