@@ -1,6 +1,3 @@
-/* src/App.css */
-
-/* Ocupar toda la pantalla y quitar márgenes por defecto */
 body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -21,7 +18,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Empuja el logo arriba y el perfil abajo */
+  justify-content: space-between;
   padding: 30px 20px;
   box-shadow: 4px 0 10px rgba(0,0,0,0.1);
 }

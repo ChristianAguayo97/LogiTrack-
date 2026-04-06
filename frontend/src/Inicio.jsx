@@ -44,19 +44,27 @@ const Inicio = ({ usuarioActual }) => {
 
   return (
     <div>
-        <div className='panel-envios'>
-            <h2>Gestión de envios</h2>
-            <div className = "acciones-inicio">
-              {/* Boton condicional que aparece solo si el usuario es supervisor */}
-              {usuarioActual?.rol?.toLowerCase() === 'supervisor' && (
-                <Link to="/auditoria" className="boton-auditoria">Auditoria</Link>
-              )}
-              <Link to="/nuevo-envio" className="boton-nuevo-envio">Nuevo envio</Link>
+        <div className='inicio-contenedor'>
+            <div className = 'inicio-encabezado'>
+                <h2>Gestión de envios</h2>
+                <p>Lista y administración de todos los paquetes activos.</p>
+            </div>
+
+            <div className = 'contenedor-acciones contenedor-acciones-buscador'>
+                <BuscadorEnvios onBuscar={cargarEnvios} />  
+
+                <div className = 'contenedor-acciones-auditoria-crear'>
+                  {usuarioActual?.rol?.toLowerCase() === 'supervisor' && (
+                  <Link to="/auditoria" className="boton-auditoria">Auditoría</Link>
+                  )}
+                  <Link to="/nuevo-envio" className="boton-nuevo-envio">+ Nuevo envío</Link>
+                </div>
+            </div>
+
+            <div className = 'contenedor-acciones'>
+              <TablaEnvios envios={envios} />
             </div>
         </div>
-
-        <BuscadorEnvios onBuscar={cargarEnvios} />
-        <TablaEnvios envios={envios} /> 
     </div>
   );
 };

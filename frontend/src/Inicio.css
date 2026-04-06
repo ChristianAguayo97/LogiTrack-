@@ -1,8 +1,40 @@
-.panel-envios {
+.inicio-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inicio-encabezado h2 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 28px;
+}
+
+.inicio-encabezado p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.contenedor-acciones {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.contenedor-acciones-buscador {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 15px 25px;
+}
+
+.contenedor-acciones-auditoria-crear {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .boton-nuevo-envio {
@@ -18,12 +50,6 @@
 
 .boton-nuevo-envio:hover {
     background-color: #269941;
-}
-
-.acciones-inicio {
-    display: flex;
-    gap: 15px;
-    align-items: center;
 }
 
 .boton-auditoria {
